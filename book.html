@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+   
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="book.css">
+    <title>Enregistrer un Livre</title>
+    <script>
+        function validateForm() {
+            var title = document.forms["bookForm"]["title"].value;
+            var author = document.forms["bookForm"]["author"].value;
+            var year = document.forms["bookForm"]["year"].value;
+            var currentYear = new Date().getFullYear();
+
+            if (title === "" || author === "" || year === "") {
+                alert("Tous les champs doivent être remplis");
+                return false;
+            }
+            if (isNaN(year) || year < 1900 || year > currentYear) {
+                alert("L'année de publication doit être un nombre entre 1900 et " + currentYear);
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    
+    <form name="bookForm" action="submit.php" onsubmit="return validateForm()" method="post">
+        <label for="title">Titre:</label>
+        <input type="text" id="title" name="title"><br><br>
+        <label for="author">Auteur:</label>
+        <input type="text" id="author" name="author"><br><br>
+        <label for="year">Année de publication:</label>
+        <input type="text" id="year" name="year"><br><br>
+        <input type="submit" class="env" value="Enregistrer">
+    </form>
+</body>
+</html>

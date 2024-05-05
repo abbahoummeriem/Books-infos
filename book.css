@@ -1,0 +1,60 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('library.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  backdrop-filter:  blur(3px);
+}
+ form {
+
+        padding: 70px;
+        box-shadow: 4px 10px 7px rgba(0, 0, 0, 0.507);
+        margin: 30px;
+        border-radius: 20px;
+        flex-direction: column;
+        display: flex;
+        line-height: 16PX;
+        background-color:rgba(79, 42, 10, 0.564);
+        
+     }
+
+     .env{
+        border: 1px solid  #b66933;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #ffbb8ab2;
+        color:#723103;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+     }
+input{
+    padding: 10px;
+   border-radius: 10px;
+   border: 1px solid  rgb(248, 242, 224) ;
+   background-color: #e9c0a395;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+}
+input:hover{
+    border: 2px solid  rgb(255, 157, 0);
+}
+label{
+    color: #ffc69d;
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.env:hover{
+    background-color:rgb(255, 194, 114) ;
+    cursor: pointer;
+    transition: all 2s ease; 
+    color: rgb(195, 90, 10);
+}
